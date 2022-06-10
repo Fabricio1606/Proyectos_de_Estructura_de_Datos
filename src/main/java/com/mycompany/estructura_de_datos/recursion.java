@@ -25,6 +25,19 @@ public class recursion {
         }
     }
 
+    // Metodo de reiteración//
+    public static int PosicionMayor(int[] numeros, int indice, int mayor, int posicion) {
+
+        if (indice != numeros.length) {
+            if (numeros[indice] > mayor) {
+                posicion = PosicionMayor(numeros, indice + 1, numeros[indice], indice);
+            } else {
+                posicion = PosicionMayor(numeros, indice + 1, mayor, posicion);
+            }
+        }
+        return posicion;
+    }
+
     public static int encontrarMax(int[] numeros, int indice, int max) {
 
         if (indice != numeros.length) {
@@ -34,7 +47,6 @@ public class recursion {
             } else {
                 max = encontrarMax(numeros, indice + 1, max);
             }
-
         }
         return max;
     }

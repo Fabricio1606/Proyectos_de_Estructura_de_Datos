@@ -11,10 +11,21 @@ package com.mycompany.estructura_de_datos;
 public class main {
     
     public static void main(String[] args) {
-        int[] arr = {12, 34, 64, 2, 3};
+        /*int[] arr = {12, 34, 64, 2, 3};
         //---------------Recursividad--------------//
         System.out.println(recursion.factorial(3));
-        System.out.println(recursion.encontrarMax(arr, 0, 0));
+        System.out.println(recursion.encontrarMax(arr, 0, 0));*/
+        
+        //---------------Pilas----------------------
+        
+        stack <String> Pila = new stack<String>();
+        
+        Pila.push("H");
+        Pila.push("P");
+        Pila.push("J");
+        System.out.println(Pila.pop());
+        System.out.println(Pila.pop());
+        System.out.println(Pila.pop());
     }
     
 }

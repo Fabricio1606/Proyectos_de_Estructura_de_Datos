@@ -8,29 +8,28 @@ package com.mycompany.estructura_de_datos;
  *
  * @author User
  */
-public class node {
+public class node<T> {
 
-    private int value;
-    private node next;
+    private T value;
+    private node<T> next;
 
-    public node() {
-        this.value = 0;
-        this.next = null;
-    }
-
-    public int getValue() {
-        return value;
-    }
-
-    public void setValue(int value) {
+    public node(T value) {
         this.value = value;
     }
 
-    public node getNext() {
+    public T getValue() {
+        return value;
+    }
+
+    public void setValue(T value) {
+        this.value = value;
+    }
+
+    public node<T> getNext() {
         return next;
     }
 
-    public void setNext(node next) {
+    public void setNext(node<T> next) {
         this.next = next;
     }
 }
