@@ -8,23 +8,30 @@ package com.mycompany.estructura_de_datos;
  *
  * @author User
  */
-public class queue <T>{
-    
+public class queue<T> {
+
     private node<T> head;
-    private node <T> tail;
-    
-    public void enqueue (T value) {
-        node<T> newNode = new node<T> (value);
+    private node<T> tail;
+
+    public void enqueue(T value) {
+        node<T> newNode = new node<T>(value);
         if (head == null) {
             head = newNode;
             tail = newNode;
-            
-        }
-        else {
+        } else {
             tail.setNext(newNode);
             tail = newNode;
-            
         }
     }
-    
+
+    public node<T> dequeue() {
+        if (head == null) {
+            System.out.println("La cola ya se encuentra vacia");
+            return null;
+        } else {
+            node<T> firstInQueue = head;
+            head = head.getNext();
+            return firstInQueue;
+        }
+    }
 }
